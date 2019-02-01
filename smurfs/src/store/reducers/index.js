@@ -53,7 +53,7 @@ const reducer = (state = initialState, action) => {
         name: "",
         age: "",
         height: "",
-        updateSmurf: false
+        updatingSmurf: false
       };
 
     case LOADING_START:
@@ -66,7 +66,8 @@ const reducer = (state = initialState, action) => {
       return {
         ...state,
         fetchingSmurfs: false,
-        error: "ERROR COMMUNICATING WITH API"
+        error: "ERROR COMMUNICATING WITH API",
+        updatingSmurf: false
       };
 
     case HANDLE_CHANGE:
